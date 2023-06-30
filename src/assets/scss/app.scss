@@ -1,0 +1,85 @@
+@import '../scss/font.scss';
+
+
+.hero {    
+        &::before {
+            content: '';
+            background-image: url('../images/hero.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position:fixed;  
+            height: 1180px;
+            width: 100%;
+            z-index: -1;
+    }
+    &::after {
+}
+
+.images {
+
+    &::after {
+        content: '';
+        background-image: url('../images/dots.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -58px;
+        right: 116px;
+        background-position:fixed;  
+        height: 370px;
+        width: 550px;
+        z-index: -2;
+    
+    }
+}
+}
+
+.about {
+    position: relative;
+    .main::after {
+        content: '';
+        background-image: url('../images/telescope.svg');
+        background-size:contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-position:fixed;  
+        top: -200px;
+        right: 0;
+        height: 597px;
+        width: 441px;
+        z-index: -2;
+        display: block;
+
+        @media screen and (max-width:1400px) {
+            display: none;
+        }
+    }
+}
+
+.plans {
+    position: relative;
+    .main::after {
+        content: '';
+        background-image: url('../images/Podcast.svg');
+        background-size:contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-position:fixed;  
+        top: 105px;
+        right: -5px;
+        height: 158px;
+        width: 641px;
+        z-index: -2;
+        display: block;
+        @media screen and (max-width:1400px) {
+            width: 400px;
+        }
+
+        @media screen and (max-width:992px) {
+            display: none;
+        }
+    }
+}
